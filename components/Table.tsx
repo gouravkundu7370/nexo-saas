@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import ReactDOM from "react-dom/client";
+
 import {
   ChevronRight,
   ChevronLeft,
@@ -23,15 +23,15 @@ import {
 } from "@tanstack/react-table";
 
 import { InferSelectModel } from "drizzle-orm";
-import { feedbacks, projects } from "@/db/schema";
+import { feedbacks } from "@/db/schema";
 import Ratings from "./Ratings";
 import { Input } from "./ui/input";
-import { Select } from "./ui/select";
+
 type Feedback = InferSelectModel<typeof feedbacks>;
 
 
 function Table(props: { data: Feedback[] }) {
-  const rerender = React.useReducer(() => ({}), {})[1]
+
 
   const columns = React.useMemo<ColumnDef<Feedback>[]>(
     () => [
