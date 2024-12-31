@@ -1,18 +1,13 @@
 import CopyBtn from "@/components/CopyBtn";
-interface PageProps {
+
+const page = ({
+  params,
+}: {
   params: {
     projectId: string;
   };
-}
-export default async function page({
-  params,
-}:PageProps) {
-const { projectId: rawProjectId } = await params;
-const projectId = parseInt(rawProjectId);
-
-if (isNaN(projectId)) {
-  return <div>Invalid Project ID</div>;
-}
+}) => {
+  if (!params.projectId) return <div>Invalid Project ID</div>;
   if (!process.env.WIDGET_URL) return <div>Missing WIDGET_URL</div>;
 
   return (
@@ -23,14 +18,16 @@ if (isNaN(projectId)) {
       </p>
       <div className="bg-blue-950 p-6 rounded-md mt-6 relative">
         <code className=" text-white">
-          {`<my-widget project-id="${projectId}"></my-widget>`}
+          {`<my-widget project-id="${params.projectId}"></my-widget>`}
           <br />
           {`<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
         </code>
         <CopyBtn
-          text={`<my-widget project-id="${projectId}"></my-widget>\n<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
+          text={`<my-widget project-id="${params.projectId}"></my-widget>\n<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
         />
       </div>
     </div>
   );
-}
+};
+
+export default page;

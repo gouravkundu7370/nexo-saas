@@ -6,14 +6,15 @@ import { Globe, ChevronLeft, Code } from "lucide-react";
 import React from "react";
 import Table from "@/components/Table";
 
-interface PageProps {
+
+export default async function page({
+  params,
+}: {
   params: {
     projectId: string;
   };
-}
-
-export default async function page({ params }: PageProps) {
-  const { projectId: rawProjectId } = await params;
+}) {
+  const { projectId: rawProjectId } = params;
   const projectId = parseInt(rawProjectId);
 
   if (isNaN(projectId)) {
