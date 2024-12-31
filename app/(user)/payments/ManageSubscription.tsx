@@ -8,7 +8,7 @@ import { Loader2 } from "lucide-react";
 const ManageSubscription = () => {
   const router = useRouter();
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, ] = useState<string | null>(null);
 
   const redirectToCustomerPortal = async () => {
     setLoading(true);

@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
-import { useRouter } from "next/navigation";
+
 import { Loader2 } from "lucide-react";
 import { getStripe } from "@/lib/stripeClient";
 
@@ -10,9 +10,9 @@ type Props = {
 };
 
 const SubscribeBtn = ({ price }: Props) => {
-  const router = useRouter();
+
   const [loading, setLoading] = useState<boolean>(false);
-  const [error, setError] = useState<string | null>(null);
+  const [error, ] = useState<string | null>(null);
 
   const handleCheckout = async (price: string) => {
     setLoading(true);

@@ -4,7 +4,7 @@ import { db } from "@/db";
 import { subscriptions } from "@/db/schema";
 import { eq } from "drizzle-orm";
 
-export async function POST(req: Request) {
+export async function POST() {
   const { userId } = await auth();
 
   if (!userId) {

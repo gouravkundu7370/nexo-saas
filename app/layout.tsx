@@ -1,9 +1,6 @@
 import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton,
+  ClerkProvider
+
 } from "@clerk/nextjs";
 import "./globals.css";
 import PageHeader from "@/components/HeaderPage";
@@ -25,8 +22,6 @@ export default function RootLayout({
           >
             
               <PageHeader />
-          
-
             {children}
           </ThemeProvider>
         </body>
