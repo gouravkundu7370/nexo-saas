@@ -1,36 +1,56 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# **NEXO** 🚀
 
-## Getting Started
+Easily integrate **NEXO** and start collecting feedback like a pro!  
+Below is a quick demo of the widget in action.  
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## **Preview** 🌟
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+![NEXO Widget Demo](./public/demo.gif)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## **Try It Live** 🌐
 
-## Learn More
+Experience the platform firsthand by visiting the official NEXO SaaS platform:  
+👉 [**NEXO Platform**](https://nexo-saas.vercel.app) 👈
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## **Why Choose NEXO?** 🤔
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+✅ **Seamless Integration**: Add it to your projects in no time.  
+✅ **User-Friendly Interface**: Designed for efficiency and simplicity.  
+✅ **Customizable**: Tailor the widget to your needs with ease.  
+✅ **Scalable**: Suitable for projects of all sizes.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## **Get Started** 🚀
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/gouravkundu7370/nexo-saas
+   cd nexo
+2. Install Dependencies:
+    ```bash
+    npm install
+3. Run the development server:
+    ```bash
+    npm run dev
+4. Open http://localhost:3000 to see the saas in action!
+
+## **Contribute** 🙌
+
+We welcome contributions to improve **NEXO**!  
+Feel free to submit a pull request or open an issue to share your ideas and enhancements.
+
+---
+
+## **Stay Connected** 🌐
+
+Follow us on [GitHub](https://github.com/gouravkundu7370/nexo-saas) for updates, new features, and the latest news!  
+Don't forget to star ⭐ the repository if you find it helpful!
+
+
+
