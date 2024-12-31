@@ -252,16 +252,17 @@ function Filter({
   column,
   table,
 }: {
-  column: Column<any, any>
-  table: TanstackTable<any>
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  column: Column<any, any>;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  table: TanstackTable<any>;
 }) {
   const firstValue = table
     .getPreFilteredRowModel()
-    .flatRows[0]?.getValue(column.id)
+    .flatRows[0]?.getValue(column.id);
 
-  const columnFilterValue = column.getFilterValue()
+  const columnFilterValue = column.getFilterValue();
   const isMessageColumn = column.id === "message";
-  
 
   return typeof firstValue === "number" ? (
     <div className="flex space-x-2" onClick={(e) => e.stopPropagation()}>
