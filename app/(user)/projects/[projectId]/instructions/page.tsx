@@ -1,13 +1,8 @@
 import CopyBtn from "@/components/CopyBtn";
 
-const page = ({
-  params,
-}: {
-  params: {
-    projectId: string;
-  };
-}) => {
-  if (!params.projectId) return <div>Invalid Project ID</div>;
+const page = async ({ params }: { params: Promise<{ projectId: string }> }) => {
+   const resolvedParams = await params;
+  if (!resolvedParams?.projectId) return <div>Invalid Project ID</div>;
   if (!process.env.WIDGET_URL) return <div>Missing WIDGET_URL</div>;
 
   return (
@@ -18,12 +13,12 @@ const page = ({
       </p>
       <div className="bg-blue-950 p-6 rounded-md mt-6 relative">
         <code className=" text-white">
-          {`<my-widget project-id="${params.projectId}"></my-widget>`}
+          {`<my-widget project-id="${resolvedParams.projectId}"></my-widget>`}
           <br />
           {`<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
         </code>
         <CopyBtn
-          text={`<my-widget project-id="${params.projectId}"></my-widget>\n<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
+          text={`<my-widget project-id="${resolvedParams.projectId}"></my-widget>\n<script src="${process.env.WIDGET_URL}/widget.umd.js"></script>`}
         />
       </div>
     </div>

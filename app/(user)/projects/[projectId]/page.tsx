@@ -7,14 +7,9 @@ import React from "react";
 import Table from "@/components/Table";
 
 
-export default async function page({
-  params,
-}: {
-  params: {
-    projectId: string;
-  };
-}) {
-  const { projectId: rawProjectId } = params;
+export default async function page({ params }: { params: Promise<{ projectId: string }> }) {
+   const resolvedParams = await params;
+  const { projectId: rawProjectId } = resolvedParams;
   const projectId = parseInt(rawProjectId);
 
   if (isNaN(projectId)) {
